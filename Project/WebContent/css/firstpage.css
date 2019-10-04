@@ -1,0 +1,36 @@
+@charset "ISO-8859-1";
+body
+{
+	font-family: Tahoma , Geneva, sans-serif;;
+	color: #fff;
+	background: url(brown.jpg);
+	background-size: cover;
+}
+.signup
+{
+	background: rgba(44,62,80,0.7);
+	padding: 40px;
+	width: 250px;
+	margin: auto;
+	margin-top: 100px;
+	height: 480px;
+	margin-left: 620px;
+}
+form
+{
+	width: 240px;
+	text-align:center;
+}
+a:link, a:visited {
+  background-color: #B66611;
+  color: white;
+  padding: 14px 25px;
+  margin-top: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}

@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+body
+{
+	font-family: Tahoma , Geneva, sans-serif;;
+	color: #fff;
+	background: url(cam.jpg);
+	background-size: cover;
+}
+.formm
+{
+	background: rgba(44,62,80,0.7);
+	padding: 40px;
+	width: 250px;
+	margin: auto;
+	margin-top: 100px;
+	height: 480px;
+	margin-left: 620px;
+}
+input[type=submit] {
+  border-radius: 4px;
+  background-color: #d9c7c7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+input[type=submit] span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+input[type=submit] span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+input[type=button]:hover span {
+  padding-right: 25px;
+}
+
+input[type=button]:hover span:after {
+  opacity: 1;
+  right: 0;
+}

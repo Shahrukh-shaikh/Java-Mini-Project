@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Page</title>
+<link href="/Project/css/signup.css" rel="stylesheet" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=Play"rel="Stylesheet">
+</head>
+<body>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+
+<script>
+
+
+
+
+function checkPass()
+{
+    var pass1 = document.getElementById('password');
+    var pass2 = document.getElementById('conpassword');
+    var message = document.getElementById('error-nwl');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+ 	
+    if(pass1.value.length > 8)
+    {
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "character number ok!"
+    }
+    else
+    {
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " Password should be more than 8 letters!"
+        return;
+    }
+  
+    if(pass1.value == pass2.value)
+    {
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "ok!"
+    }
+	else
+    {
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords doesn't match"
+    }
+}
+
+</script>
+
+
+	<div class="signup">
+	<form action=rs.do name="myForm" method="post" autocomplete="off">
+	<h2 style="color: #fff;">Sign up</h2>
+	<input type="text" name="firstname" id="firstname" placeholder="First name" required><br><br>
+	<input type="text" name="lastname" placeholder="Last name" required><br><br>
+	<input type="text" name="email" placeholder="Email address" required><br><br>
+	<input type="password" name="password" placeholder="Password" id="password" onkeyup="checkPass(); return false;"  onclick="return encrypt()" required><br><br>
+	<div id="error-nwl"></div>
+	<input type="password" name="conpassword" placeholder="Confirm password" id="conpassword" onkeyup="checkPass(); return false;" required><br><br>
+	
+	
+	<input type="submit" value="Sign up"><br><br>
+		
+	</form>
+
+	</div>
+
+</body>
+</html>
